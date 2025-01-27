@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.0.4] - 2025-01-27
+
+### Added
+- Tagged Screenshots pages
+- Override for default page limit 
+
+### Fixed
+
+- Bug where selected tags from a previous image wouldn't clear correctly after modal close
+
 ## [v0.0.3] - 2025-01-27
 
 ### Added

@@ -5,7 +5,11 @@ services:
     ports:
       - 8090:80
     volumes:
-      - ./data:/var/www/html/data
+      - type: bind
+        source: ./data
+        target: /var/www/html/data
+        bind:
+          propagation: rshared
     environment:
       ADMIN_DOMAIN: photon.jrdn.dev
       SHARE_DOMAIN: ss.example.com
