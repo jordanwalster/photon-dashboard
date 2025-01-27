@@ -1,0 +1,14 @@
+services:
+  photon:
+    container_name: photon_dashboard
+    image: git.jrdn.dev/jordanwalster/photon-dashboard:latest
+    ports:
+      - 8090:80
+    volumes:
+      - ./data:/var/www/html/data
+    environment:
+      ADMIN_DOMAIN: photon.jrdn.dev
+      SHARE_DOMAIN: ss.example.com
+      USER_EMAIL: me@example.com
+      TAGS_ENABLED: false
+      SEARCH_ENABLED: false
