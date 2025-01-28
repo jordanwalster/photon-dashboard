@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v0.0.4] - 2025-01-27
+## [v0.0.4] (The Tag Update) - 2025-01-27
 
 ### Added
+
+- Update compose file to use bind mount
+- Delete tag button
+- Added image tag pagination
 - Tagged Screenshots pages
 - Override for default page limit 
 
