@@ -1,4 +1,4 @@
-# Photon Dashboard
+# Photon Screenshot Dashboard
 
 The PHP Screenshot Management Dashboard
 
@@ -28,15 +28,15 @@ services:
 There are additional environment variables that can be set to enable experimental features (defaults are set to false):
 
 
-| Environment Variable | Values            | Description                        |
-| -------------------- | ----------------- | ---------------------------------- |
-| TAGS_ENABLED         | `true` \| `false` | Enables the tagging functionality  |
-| SEARCH_ENABLED       | `true` \| `false` | Enables screenshot search          |
+| Environment Variable | Values            | Default | Description                        |
+| -------------------- | ----------------- |:-------:| ---------------------------------- |
+| TAGS_ENABLED         | `true` \| `false` |  false  | Enables the tagging functionality  |
+| SEARCH_ENABLED       | `true` \| `false` |  false  | Enables screenshot search          |
+| PAGE_LIMIT           | `true` \| `false` |   24    | Override the default page limit    |
 
 You can find the container image history [here](https://git.jrdn.dev/jordanwalster/-/packages/container/photon-dashboard/versions).
 
 # Changelog
-
 
 ## [v0.0.4] (The Tag Update) - 2025-01-27
 
