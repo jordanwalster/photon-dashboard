@@ -29,10 +29,10 @@ There are additional environment variables that can be set to enable experimenta
 
 
 | Environment Variable | Values            | Default | Description                        |
-| -------------------- | ----------------- |:-------:| ---------------------------------- |
+| -------------------- |:-----------------:|:-------:| ---------------------------------- |
 | TAGS_ENABLED         | `true` \| `false` |  false  | Enables the tagging functionality  |
 | SEARCH_ENABLED       | `true` \| `false` |  false  | Enables screenshot search          |
-| PAGE_LIMIT           | `true` \| `false` |   24    | Override the default page limit    |
+| PAGE_LIMIT           | `int`             |   24    | Override the default page limit    |
 
 You can find the container image history [here](https://git.jrdn.dev/jordanwalster/-/packages/container/photon-dashboard/versions).
 
