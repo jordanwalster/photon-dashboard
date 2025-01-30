@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.0.8] - 2025-01-30
+
+### Fixed
+- Some tags elements attempting to load when `TAGS_ENABLED` set to false.
+
 ## [v0.0.7] - 2025-01-29
 
 ### Added
