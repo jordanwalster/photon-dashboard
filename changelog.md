@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [v0.0.8] - 2025-01-30
 
+### Added
+- Support for displaying images with `.jpeg` extension in addition to `.jpg`.
+
 ### Fixed
 - Some tags elements attempting to load when `TAGS_ENABLED` set to false.
 
