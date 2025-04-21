@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.0.9] - 2025-04-21
+
+### Fixed
+- Occasional redirection to a previous page when deleting or restoring images.
+- Assign tags field remembers existing tags.
+- Allowing removal of tags from an image.
+
+### Changed
+- Pages no longer use query strings and instead use paths.
+- Tags now replace spaces with dashes.
+- Search, Tags and Trash now enabled by default.
+- File format shown in badge.
+- Links are now path based instead of query string based.
+
+### Added
+- Introduced search functionality.
+- Rename tag button.
+- Restore all button for trashed images.
+
 ## [v0.0.8] - 2025-01-30
 
 ### Added
