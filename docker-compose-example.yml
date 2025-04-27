@@ -3,7 +3,7 @@ services:
     container_name: photon_dashboard
     image: git.jrdn.dev/jordanwalster/photon-dashboard:latest
     volumes:
-      - ./db:/var/www/html/db
+      - ./db:/var/www/html/db # Only required if migrating from SQLite
       - type: bind
         source: ${DATA_PATH}
         target: /var/www/html/data
