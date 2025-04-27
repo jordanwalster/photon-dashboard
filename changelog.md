@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v0.1.0] - 2025-05-05
+## [v0.1.0] - 2025-04-27
 
 ### Fixed
 - Sharing URL Scheme set to `https` regardless of setting in environment variables.
