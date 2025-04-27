@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.0] - 2025-05-05
+
+### Fixed
+- Sharing URL Scheme set to `https` regardless of setting in environment variables.
+- Search not clearing the first two characters after emptying search field.
+- Error handing for existing tag names.
+- Double click bug on modals.
+- Permanently deleting images did not remove from db
+- Pagination on tagged pages showed in the corner.
+
+### Changed
+- Upgraded to PHP 8.
+- Database engine now using MySQL.
+- Mandatory setting for admin url removed.
+
+### Added
+- Search by image content using OCR via worker container.
+- Button for applying actions to multiple images at a time.
+- Automatic migration tool for SQLite to MySQL
+- Tag not found page for nonexistent tags.
+- Custom time zone environment variable.
+- Form validation using JS for frontend.
+- Messaging for no OCR table.
+- Icons on context menu.
+
 ## [v0.0.9] - 2025-04-21
 
 ### Fixed
