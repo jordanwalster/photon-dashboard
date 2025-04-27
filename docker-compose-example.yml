@@ -2,17 +2,38 @@ services:
   photon:
     container_name: photon_dashboard
     image: git.jrdn.dev/jordanwalster/photon-dashboard:latest
-    ports:
-      - 8090:80
     volumes:
+      - ./db:/var/www/html/db
       - type: bind
-        source: ./data
+        source: ${DATA_PATH}
         target: /var/www/html/data
         bind:
           propagation: rshared
-    environment:
-      ADMIN_DOMAIN: photon.jrdn.dev
-      SHARE_DOMAIN: ss.example.com
-      USER_EMAIL: me@example.com
-      TAGS_ENABLED: false
-      SEARCH_ENABLED: false
+    ports:
+      - ${PHOTON_PORT:-8090}:80
+    env_file:
+      - .env
+  web:
+    container_name: public_web
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ${DATA_PATH}:/usr/share/nginx/html:ro
+  worker:
+    container_name: photon_worker
+    image: git.jrdn.dev/jordanwalster/photon-worker:latest
+    volumes:
+      - ${DATA_PATH}:/var/www/html/data
+    env_file:
+      - .env
+  db:
+    container_name: photon_db
+    image: mariadb
+    volumes:
+      - db:/var/lib/mysql
+    env_file:
+      - .env
+
+volumes:
+  db:
