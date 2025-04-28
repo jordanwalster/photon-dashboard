@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.1] - 2025-04-28
+
+### Fixed
+- Columns not updating when selected in dropdown.
+- Icons missing from context menu on search page.
+
+### Changed
+- Version numbers are now taken from container image.
+
 ## [v0.1.0] - 2025-04-27
 
 ### Fixed
