@@ -1,0 +1,30 @@
+name: Enhancement Request
+about: Suggest a way things could be improved
+title: "[Feature] ..."
+labels: "Kind/Feature"
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What is your idea?
+      description: Describe the feature you would like to see. Attach any screenshots or mockups if you have them.
+      placeholder: I would like to see...
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of Photon are you running? You can find this in the footer of the app.
+      options:
+        - 0.1.1 (Latest)
+        - 0.1.0
+        - 0.0.9
+        - 0.0.8
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        This issue was created using the feature template.
+    visible: [content]
