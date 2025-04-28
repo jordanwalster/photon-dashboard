@@ -3,11 +3,6 @@ about: File a bug report
 title: "[Bug] ..."
 labels: "Kind/Bug"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        This issue was created using the bug report template.
-    visible: [content]
   - type: textarea
     id: what-happened
     attributes:
@@ -28,3 +23,8 @@ body:
         - 0.0.8
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        This issue was created using the bug report template.
+    visible: [content]

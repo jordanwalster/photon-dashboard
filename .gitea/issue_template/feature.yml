@@ -3,11 +3,6 @@ about: Suggest an idea for this project
 title: "[Feature] ..."
 labels: "Kind/Feature"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        This issue was created using the feature template.
-    visible: [content]
   - type: textarea
     id: idea
     attributes:
@@ -28,3 +23,8 @@ body:
         - 0.0.8
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        This issue was created using the feature template.
+    visible: [content]
