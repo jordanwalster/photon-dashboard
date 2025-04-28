@@ -36,6 +36,9 @@ All notable changes to this project will be documented in this file.
 - Messaging for no OCR table.
 - Icons on context menu.
 
+### Removed
+- Image format being shown in corner.
+
 ## [v0.0.9] - 2025-04-21
 
 ### Fixed
