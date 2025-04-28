@@ -1,0 +1,29 @@
+name: Bug Report
+about: File a bug report
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue was created using the bug report template.
+    visible: [content]
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what the expected behaviour was.
+      placeholder: A bug happened!
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of Photon are you running? You can find the version in the footer of the app.
+      options:
+        - 0.1.1 (Latest)
+        - 0.1.0
+        - 0.0.9
+        - 0.0.8
+    validations:
+      required: true
