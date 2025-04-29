@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.2] - 2025-04-29
+
+> [!WARNING]  
+> This introduces a breaking change that requires the latest version of the photon-worker container image.
+
+### Added
+- Image compression worker function, decreasing page load times.
+
 ## [v0.1.1] - 2025-04-28
 
 ### Fixed
