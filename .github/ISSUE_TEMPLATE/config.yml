@@ -1,5 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Open an issue on Gitea
-    url: https://git.jrdn.dev/jordanwalster/photon-dashboard/issues/new/choose
-    about: Please raise an issue here.
