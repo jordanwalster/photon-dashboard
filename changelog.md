@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.3] - 2025-05-03
+
+### Added
+- Upload button for uploading via web dashboard.
+
+### Changed
+- Column dropdown is now a button that switches between options.
+- Some old icons have been switched to FontAwesome icons.
+- Sidebar remaining open flag is now set by a cookie instead of a session token.
+
+### Fixed
+- Page refresh loop when changing column count.
+- Scrollbar failing to show after page content changes.
+- Bug where images with capitalised file extensions do not appear in the grid.
+- Unable to use multi select actions on images with spaces in their names.
+
+### Removed
+- `TAGS_ENABLED`, `SEARCH_ENABLED` and `TRASH_ENABLED` environment variables, these are now permanently enabled.
+
 ## [v0.1.2] - 2025-04-29
 
 > [!WARNING]  
@@ -49,10 +68,10 @@ All notable changes to this project will be documented in this file.
 
 ## [v0.0.9] - 2025-04-21
 
-### Fixed
-- Occasional redirection to a previous page when deleting or restoring images.
-- Assign tags field remembers existing tags.
-- Allowing removal of tags from an image.
+### Added
+- Introduced search functionality.
+- Rename tag button.
+- Restore all button for trashed images.
 
 ### Changed
 - Pages no longer use query strings and instead use paths.
@@ -61,10 +80,10 @@ All notable changes to this project will be documented in this file.
 - File format shown in badge.
 - Links are now path based instead of query string based.
 
-### Added
-- Introduced search functionality.
-- Rename tag button.
-- Restore all button for trashed images.
+### Fixed
+- Occasional redirection to a previous page when deleting or restoring images.
+- Assign tags field remembers existing tags.
+- Allowing removal of tags from an image.
 
 ## [v0.0.8] - 2025-01-30
 
