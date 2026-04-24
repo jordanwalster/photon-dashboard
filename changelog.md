@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 - Upload destination can now be selected when there are new folders.
 
 ### Fixed
-- Bug where pagination 
+- Bug where pagination would display pages that don't exist.
 
 ## [v0.1.3] - 2025-05-03
 
