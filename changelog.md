@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.2] - 2025-04-24
+
+### Added
+- Folders for better file management, items in folders can also have tags.
+- Ability to untag selected images instead of removing tags one at a time.
+
+### Changed
+- Upload destination can now be selected when there are new folders.
+
+### Fixed
+- Bug where pagination 
+
 ## [v0.1.3] - 2025-05-03
 
 ### Added
