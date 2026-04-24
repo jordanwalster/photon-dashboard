@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v0.1.4] - 2025-04-24
+## [v0.1.4] - 2026-04-24
 
 ### Added
 - Folders for better file management, items in folders can also have tags.
