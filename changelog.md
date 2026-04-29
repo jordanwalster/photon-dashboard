@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [v0.1.4] - 2026-04-24
 
+> [!TIP]
+> Web container is being removed in the next update, update your compose files on the next update.
+
 ### Added
 - Folders for better file management, items in folders can also have tags.
 - Ability to untag selected images instead of removing tags one at a time.
