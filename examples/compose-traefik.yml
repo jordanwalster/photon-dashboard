@@ -1,0 +1,57 @@
+services:
+  # Photon services
+  photon:
+    container_name: photon_dashboard
+    image: git.jrdn.dev/jordanwalster/photon-dashboard:latest
+    volumes:
+      - ./db:/var/www/html/db # Only required if migrating from SQLite
+      - type: bind
+        source: ${DATA_PATH}
+        target: /var/www/html/data
+        bind:
+          propagation: rshared
+    env_file:
+      - .env
+    labels:
+      # Dashboard configuration
+      - "traefik.enable=true"
+      - "traefik.http.routers.photon.rule=Host(`${PHOTON_DOMAIN}`)"
+      - "traefik.http.routers.photon.service=photon"
+      - "traefik.http.services.photon.loadbalancer.server.port=80"
+
+      # Custom domain for share links
+      - "traefik.http.routers.photon-share.rule=Host(`${PHOTON_SHARE_DOMAIN}`)"
+      - "traefik.http.routers.photon-share.service=photon-share"
+      - "traefik.http.middlewares.photon-share-path.addprefix.prefix=/share"
+      - "traefik.http.routers.photon-share.middlewares=photon-share-path"
+      - "traefik.http.services.photon-share.loadbalancer.server.port=80"
+  worker:
+    container_name: photon_worker
+    image: git.jrdn.dev/jordanwalster/photon-worker:latest
+    volumes:
+      - ${DATA_PATH}:/var/www/html/data
+    env_file:
+      - .env
+
+  # Database
+  db:
+    container_name: photon_db
+    image: mariadb
+    volumes:
+      - db:/var/lib/mysql
+    env_file:
+      - .env
+
+  # Reverse proxy
+  traefik:
+    container_name: traefik
+    image: traefik:v3
+    command:
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+  db:

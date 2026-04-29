@@ -2,6 +2,65 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.0] - 2026-04-30
+
+> [!CAUTION]  
+> The nginx web container has been removed, share links now default to `/share/example.jpg`. To use custom domains please refer to the `examples/compose-traefik.yml` example.
+
+### Added
+- Selected images counter.
+- Sharing endpoint in photon container.
+- Deselect all button.
+- Active page indicator for tag pages.
+- Context menu for image interactions.
+- File metadata inside context menu.
+- Context menu for tags in the sidebar (rename and delete actions).
+- Sorting for images (date, size and name).
+- Selection across multiple pages at a time for better management.
+- Sticky pagination bar, prevents moving when item count is lower between pages.
+- Ability to make images private, links will only work with a valid session.
+- Favicon and logo to footer.
+- Better backend reporting for uploads.
+- New compose files for updated deployments.
+- Ability to move items between folders.
+- Animations on hover.
+- GitHub button in footer linking to project.
+
+### Changed
+- Environment variables `ADMIN_DOMAIN` and `SHARE_DOMAIN` replaced with `PHOTON_DOMAIN` and `PHOTON_SHARE_DOMAIN`.
+- Search now acts as a filter on a given page context.
+- File names now only available in the context menu.
+- Image selection highlights border, shrinks and darkens image.
+- Images now have rounded corners to match the design language.
+- Compression now limits image dimensions to further decrease storage consumption.
+- Backup file name now contains timestamp.
+- Simplified backend functions for easier maintainability.
+- Upload limits have been raised for mass-uploading.
+
+### Fixed
+- Screenshots with special characters in the name cannot be selected by clicking.
+- Restoring a file from trash will always go back to root folder regardless of original source.
+- Image does not scale correctly when changing column count.
+- Assigning tags after first page redirects you to the start.
+- Renaming an image results in tags being lost - resulting in orphaned attachments.
+- Renaming an image results in thumbnails being regenerated and creating duplicates. 
+- 'All Screenshots' in sidebar doesn't show subfolder count.
+- Going to a folder by link doesn't show it as active in the sidebar
+- Image counter for folders doesn't update on upload.
+- Uploading an image with the same name as existing will replace it without confirmation.
+- Image counters don't update on deletion.
+- Newly created tags do not show up in the delete menu until a full-page refresh has occurred.
+- Delete tag dropdown doesn't dynamically update if a tag has been deleted.
+
+### Removed
+- Autocompletion on rename form for previously entered names.
+- Secondary web container.
+- Option for two columns.
+- Menu button on images.
+- URL scheme settings.
+- Checkbox on images.
+- SQLite to MySQL migration tool.
+
 ## [v0.1.4] - 2026-04-24
 
 > [!TIP]

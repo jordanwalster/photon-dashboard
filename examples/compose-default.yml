@@ -13,13 +13,6 @@ services:
       - ${PHOTON_PORT:-8090}:80
     env_file:
       - .env
-  web:
-    container_name: public_web
-    image: nginx
-    ports:
-      - 8080:80
-    volumes:
-      - ${DATA_PATH}:/usr/share/nginx/html:ro
   worker:
     container_name: photon_worker
     image: git.jrdn.dev/jordanwalster/photon-worker:latest
@@ -34,6 +27,5 @@ services:
       - db:/var/lib/mysql
     env_file:
       - .env
-
 volumes:
   db:
