@@ -2,7 +2,7 @@
 
 ![Photon Logo](/logo.png)
 
-![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![Version](https://img.shields.io/badge/version-v1.0.1-success)
 ![Docker](https://img.shields.io/badge/docker-grey?logo=docker)
 
 A modern, self-hosted PHP screenshot and media management dashboard with powerful organization features, sharing capabilities, and a clean web interface.

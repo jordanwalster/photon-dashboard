@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.1] - 2026-04-30
+
+### Added
+- Clear search function on page type switch.
+
+### Changed
+- Image caching now has a time limit and processing is limited to 50 items at a time to prevent resource exhaustion.
+- Colours in actions dropdown more muted.
+
+### Fixed
+- Missing protocol on copy to clipboard.
+- Space handling on next page when using folders.
+- Space handling when using search in folders.
+- Database doesn't update structure when attempting to make an image private.
+- Attempted database update when images don't yet exist in the table.
+- Restore & Permanently delete selected buttons not working.
+
 ## [v1.0.0] - 2026-04-30
 
 > [!CAUTION]  
