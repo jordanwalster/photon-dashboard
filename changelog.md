@@ -2,10 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.2] - 2026-05-01
+
+### Added
+- Counter when force generating thumbnails.
+- Context menu for folders in the sidebar (rename and delete actions).
+- Confirm permanently delete popups.
+- Restore database backup tool to recover OCR and tags.
+
+### Fixed
+- Database export includes numeric array indices as column names, corrupting the backup.
+- OCR results not showing within folder context.
+- OCR results not showing for images in folders from within a tag context.
+
 ## [v1.0.1] - 2026-04-30
 
 ### Added
 - Clear search function on page type switch.
+- Remove tags and Move Folder options to Actions dropdown when searching.
 
 ### Changed
 - Image caching now has a time limit and processing is limited to 50 items at a time to prevent resource exhaustion.

@@ -2,7 +2,7 @@
 
 ![Photon Logo](/logo.png)
 
-![Version](https://img.shields.io/badge/version-v1.0.1-success)
+![Version](https://img.shields.io/badge/version-v1.0.2-success)
 ![Docker](https://img.shields.io/badge/docker-grey?logo=docker)
 
 A modern, self-hosted PHP screenshot and media management dashboard with powerful organization features, sharing capabilities, and a clean web interface.
@@ -100,7 +100,7 @@ photon-dashboard/
 ├── examples/
 │   ├── compose-default.yml    # Default example for basic usage.
 │   ├── compose-traefik.yml    # Traefik example for custom domain routing.
-│   └── .env                   # Environment configuration
+│   └── .env.example           # Environment configuration
 │
 └── changelog.md               # Version history
 ```
