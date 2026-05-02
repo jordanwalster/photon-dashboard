@@ -18,6 +18,9 @@ services:
       - "traefik.http.routers.photon.rule=Host(`${PHOTON_DOMAIN}`)"
       - "traefik.http.routers.photon.service=photon"
       - "traefik.http.services.photon.loadbalancer.server.port=80"
+      # Basic auth for dashboard (Replace this with your own credentials).
+      - "traefik.http.middlewares.photon-basic-auth.basicauth.users=${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}"
+      - "traefik.http.routers.photon.middlewares=photon-basic-auth"
 
       # Custom domain for share links
       - "traefik.http.routers.photon-share.rule=Host(`${PHOTON_SHARE_DOMAIN}`)"

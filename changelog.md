@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.3] - 2026-05-02
+
+### Added
+- Private Sidebar button for easier viewing of images set to private.
+- Make private button to multi-select actions.
+- Download button to multi-select actions.
+- Hold shift to select.
+- Select all (on page) button.
+- New version available message in footer.
+- Generate thumbnail endpoint. 
+- Feedback button to footer.
+
+### Changed
+- Updated icon library to latest.
+- Upgraded to PHP 8.5.
+- Icon for active tags now shows a tag (due to icon library updates).
+- Moved changelog link into version number.
+
+### Fixed
+- Bug where images with capitalised extensions could not be trashed by using "Empty trash" button.
+
 ## [v1.0.2] - 2026-05-01
 
 ### Added

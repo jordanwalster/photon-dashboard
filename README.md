@@ -2,7 +2,7 @@
 
 ![Photon Logo](/logo.png)
 
-![Version](https://img.shields.io/badge/version-v1.0.2-success)
+![Version](https://img.shields.io/badge/version-v1.0.3-success)
 ![Docker](https://img.shields.io/badge/docker-grey?logo=docker)
 
 A modern, self-hosted PHP screenshot and media management dashboard with powerful organization features, sharing capabilities, and a clean web interface.
@@ -10,7 +10,7 @@ A modern, self-hosted PHP screenshot and media management dashboard with powerfu
 The project consists of three main components:
 
 1. **Photon Dashboard** (`photon`): Web interface for managing screenshots.
-2. **Photon Worker** (`worker`): Background processing and file scanning.
+2. **Photon Worker** (`worker`): Background processes (OCR and thumbnail generation).
 3. **MariaDB Database** (`db`): Stores metadata and application data.
 
 Keep up-to-date on new releases by following the [changelog](./changelog.md).
@@ -59,29 +59,6 @@ An external authentication proxy is recommended to protect your dashboard from u
 
 ## Configuration
 
-### Environment Variables
-
-Copy the `.env` file and customize these key settings:
-
-#### Dashboard Settings
-- `PHOTON_PORT`: Web interface port (default: 8090)
-- `USER_EMAIL`: Admin email address
-- `DATA_PATH`: Path to your screenshots folder
-
-#### Worker Settings
-- `SCAN_RATE`: File scanning interval in seconds (default: 10)
-
-#### Database Settings
-- `MYSQL_DATABASE`: Database name used by Photon (defaults to photon). 
-- `MYSQL_USER`: Database user used by Photon.
-- `MYSQL_PASSWORD`: Database password used by Photon user.
-- `MYSQL_ROOT_PASSWORD`: Database root password.
-
-#### Domain Options
-- `PHOTON_DOMAIN`: Domain used for dashboard.
-- `PHOTON_SHARE_DOMAIN`: Optional subdomain for sharing links.
-- `COOKIE_DOMAIN`: Required when adding a subdomain for sharing. 
-
 ### Deployment Options
 
 #### Standard Deployment
@@ -91,7 +68,7 @@ docker-compose -f examples/compose-default.yml up -d
 ```
 
 #### Traefik – Custom Domains
-Use `examples/compose-traefik.yml` for reverse proxy setups with custom domains. 
+Use `examples/compose-traefik.yml` for reverse proxy setups, authentication and custom domains. 
 
 ## Project Structure
 
@@ -108,8 +85,8 @@ photon-dashboard/
 ## Updates
 
 Container images are available at:
-- Dashboard: `git.jrdn.dev/jordanwalster/photon-dashboard:latest`
-- Worker: `git.jrdn.dev/jordanwalster/photon-worker:latest`
+- Dashboard: `git.jrdn.dev/photon/photon-dashboard:latest`
+- Worker: `git.jrdn.dev/photon/photon-worker:latest`
 
 View version history: [Container Registry](https://git.jrdn.dev/jordanwalster/-/packages/container/photon-dashboard/versions)
 
