@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.1] - 2026-05-04
+
+### Fixed
+- Crowded button layout when selecting items on mobile.
+- Alignment of grid when display is between 1200px - 992px.
+- Generating thumbnails task showing as hanging despite succeeding.
+
 ## [v1.1.0] - 2026-05-04
 
 ### Added
