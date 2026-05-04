@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.0] - 2026-05-04
+
+### Added
+- Mobile-first UI with two offcanvas sidebars for page navigation and quick actions.
+- Context menu on long-press for images.
+- Breakdown for storage in sidebar.
+- Ability to scroll sidebar if content starts to overflow.
+- Custom scroll bars.
+- Redirection to 'All Screenshots' from a deleted folder or tag when currently using that page.
+
+### Changed
+- Disabled cache on shared links to prevent newly private links from being cached on client systems.
+- Delete tag/folder context menu buttons no longer trigger modal.
+- Sidebar folder icons (both parent and child).
+- Grid layout on mobile shows two in a row instead of a single image.
+- Extended cache period on thumbnails to ensure rapid page loads.
+- Made text in sidebar bold.
+- Default page limit set to 24 (Override with `PAGE_LIMIT`). 
+- Headers are sticky to keep controls visible when scrolling.
+- Disabled text selection on pagination bar.
+
+### Fixed
+- File timestamps updating after moving folders or renaming.
+- Trash icon not appearing when folder empty.
+- Scrolling twice if window height was not tall enough to fit all elements.
+
 ## [v1.0.3] - 2026-05-02
 
 ### Added
