@@ -1,0 +1,18 @@
+name: main
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+    steps:
+      # Setup environment
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update README version
+        run: |
+          CURRENT_TAG=$(git describe --tags --abbrev=0)
+          sed -i "s#version-[0-9]*\.[0-9]*\.[0-9]*-#version-$CURRENT_TAG-#g" README.md
