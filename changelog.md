@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.2] - 2026-07-31
+
+### Added
+- Apple Touch Icon for bookmarked pages.
+- Private image thumbnail when sent into social chats.
+- Additional format for thumbnail extraction to support format `YYYY-MM-DD_HH-MM-SS`.
+- Support for creating API keys.
+
+### Fixed
+- MP4 files unplayable from share URL.
+- Trash multiple selected files failing on folders with spaces.
+
 ## [v1.1.1] - 2026-05-04
 
 ### Fixed
